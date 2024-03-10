@@ -9,7 +9,7 @@ var batteryIntervalId;
 function changeImage() {
     currentImageIndex = (currentImageIndex + 1) % totalImages;
     var imageName = currentImageIndex.toString().padStart(4, '0');
-    document.getElementById("loadingImage").src = '吉祥物/_' + imageName + '.png';
+    document.getElementById("loadingImage").src = 'hero/_' + imageName + '.png';
 
     if (currentImageIndex === totalImages - 1) {
         clearInterval(loadingIntervalId);
@@ -18,7 +18,7 @@ function changeImage() {
 
 function changeBatteryImage() {
     currentBatteryImage = (currentBatteryImage + 1) % totalBatteryImages;
-    document.getElementById("batteryImage").src = '電池/' + currentBatteryImage + '.png';
+    document.getElementById("batteryImage").src = 'batter/' + currentBatteryImage + '.png';
 
     if (currentBatteryImage === totalBatteryImages - 1) {
         clearInterval(batteryIntervalId);
