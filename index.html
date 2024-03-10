@@ -1,0 +1,456 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>113屆 數勾藝</title>
+    <!-- Favicon Icon -->
+    <link rel="icon" type="images/png" href="image/畢展頭貼.png" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- 輪播 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- menu -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <!-- Main style CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+    .loading-wrapper{
+        position:fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #02042b;
+        z-index: 9999;
+
+    }
+    #mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 100px); 
+    margin-top: -75px; 
+    padding-bottom: 100px; 
+}
+
+#loadingContainer, #batteryContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#loadingImage {
+    transform: scale(0.6); 
+}
+#batteryContainer {
+        margin-top: -100px;
+}
+    </style>
+</head>
+<body>
+    <!-- 菜單 -->
+    <div class="loading-wrapper">
+        <div id="mainContainer">
+            <div id="loadingContainer">
+                <img id="loadingImage" src="吉祥物/_0000.png" alt="Loading...">
+            </div>
+            <div id="batteryContainer">
+                <img id="batteryImage" src="電池/0.png" alt="Battery Status">
+            </div>
+        </div>
+        <script src="loading.js"></script> 
+        <script>
+            $(document).ready(function(){
+                setTimeout(function(){
+                    $(".loading-wrapper").fadeOut(1000);
+                }, 3200);
+            });
+        </script>
+    </div>
+    <div id="menu">
+        <div id="menu-content">
+            <div id="mynav" class="push">
+                <div class="overlay-content container-fluid">
+                    <div class="topbtn">
+                        <a  id="close"><div class="close"></div></a>
+                        <a href="index.html"><div class="titleLogo"></div></a>
+                    </div>
+                    
+                    <div class="iconM mx-sm-2 mx-4">
+                        <a href="https://www.youtube.com/channel/UCh9oWJ3csvrWGzCTzh7_BUw" target="_blank"><img src="image/yt.png" alt="" class="net mx-2 my-sm-3  " width="70"></a>
+                        <a href="https://www.facebook.com/NCYU.DEDM.GraduationExhibition"  target="_blank"><img src="image/fb.png" alt="" class="ig mx-2 my-sm-3  " width="70"></a>
+                        <a href="https://www.instagram.com/dedm_expo/?hl=en" target="_blank"><img src="image/ig.png" alt="" class="fb mx-2 my-sm-3 "  width="70"></a>
+                    </div>
+                    <div class="row align-items-center justify-content-around ">
+                        <div class="col-6 col-sm-4 align-self-sm-end align-self-start">
+                            <div class="menulogo">
+                                <img src="" alt="" srcset="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center justify-content-around ">
+                        <div class="col-6 col-sm-4 align-self-center">
+                            <div class="team p-2">
+                                <a href="TCG.html" class="text-center">
+                                    <div class="groupName">
+                                        <span>♦&nbsp;&nbsp;</span>TCG藝術家
+                                    </div>
+                                    <div class="nameRow">
+                                        <p class="groupText">#藝術家</p>
+                                        <p class="groupText">&nbsp;&nbsp;&nbsp;#TCG卡牌</p>
+                                    </div>
+                                    
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4  align-self-center">
+                            <div class="team p-2">
+                                <a href="SeaSEA.html">
+                                    <div class="groupName">	
+                                        <span>♦&nbsp;&nbsp;</span>你來See SEA
+                                    </div>
+                                    <div class="nameRow">
+                                        <p class="groupText">#東南亞</p>
+                                        <p class="groupText">&nbsp;&nbsp;&nbsp;#遊戲</p>
+                                    </div>
+                                    
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 align-self-center">
+                            <div class="team p-2">
+                                <a href="Rootkit.html">
+                                    <div class="groupName">
+                                        <span>♦&nbsp;&nbsp;</span>Rootkit
+                                    </div>
+                                    <div class="nameRow">
+                                        <p class="groupText">#解謎遊戲</p>
+                                        <p class="groupText">&nbsp;&nbsp;&nbsp;#駭客</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 align-self-center">
+                            <div class="team p-2">
+                                <a href="truth.html">
+                                    <div class="groupName">
+                                        <span>♦&nbsp;&nbsp;</span>水落石出
+                                    </div>
+                                    <div class="nameRow">
+                                        <p class="groupText">#實境解謎</p>
+                                        <p class="groupText">&nbsp;&nbsp;&nbsp;#化石知識</p>
+                                    </div>
+                                    
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 align-self-center">
+                            <div class="team p-2">
+                                <a href="beetle.html">
+                                    <div class="groupName">
+                                        <span>♦&nbsp;&nbsp;</span>甲蟲大小事
+                                    </div>
+                                    <div class="nameRow">
+                                        <p class="groupText">#甲蟲電子書</p>
+                                        <p class="groupText">&nbsp;&nbsp;&nbsp;#新手飼養須知</p>
+                                    </div>
+                                    
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4  align-self-center">
+                            <div class="team p-2">
+                                <a href="HTH.html">
+                                    <div class="groupName">
+                                        <span>♦&nbsp;&nbsp;</span>HTH
+                                    </div>
+                                    <div class="nameRow">
+                                        <p class="groupText">#橫幅2D遊戲</p>
+                                        <p class="groupText">&nbsp;&nbsp;&nbsp;#家庭關係</p>
+                                    </div>
+                                    
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4  align-self-center">
+                            <div class="team p-2">
+                                <a href="ChemIsTry.html">
+                                    <div class="groupName">
+                                        <span>♦&nbsp;&nbsp;</span>ChemlsTry
+                                    </div>
+                                    <div class="nameRow">
+                                        <p class="groupText">#數位教材</p>
+                                        <p class="groupText">&nbsp;&nbsp;&nbsp;#化學網頁</p>
+                                    </div>
+                                    
+                                </a>
+                            </div>
+                        </div>
+                        <div class=" col-6 col-sm-4  align-self-center">
+                            <div class="team p-2">
+                                <a href="island.html">
+                                    <div class="groupName">
+                                        <span>♦&nbsp;&nbsp;</span>最後的島嶼
+                                    </div>
+                                    <div class="nameRow">
+                                        <p class="groupText">#桌遊</p>
+                                        <p class="groupText">&nbsp;&nbsp;&nbsp;#全球暖化</p>
+                                    </div>
+                                    
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 align-self-center">
+                            <div class="team p-2">
+                                <a href="ocean.html">
+                                    <div class="groupName">
+                                        <span>♦&nbsp;&nbsp;</span>海底文明的嘆息
+                                    </div>
+                                    <div class="nameRow">
+                                        <p class="groupText">#海洋汙染</p>
+                                        <p class="groupText">&nbsp;&nbsp;&nbsp;#橫向RPG遊戲</p>
+                                    </div>
+                                    
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4  align-self-center">
+                            <div class="team p-2">
+                                <a href="tiger.html">
+                                    <div class="groupName">
+                                        <span>♦&nbsp;&nbsp;</span>祈虎
+                                    </div>
+                                    <div class="nameRow">
+                                        <p class="groupText">#實境解謎</p>
+                                        <p class="groupText">&nbsp;&nbsp;&nbsp;#風俗民情</p>
+                                    </div>
+                                    
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-6  col-sm-4  align-self-center">
+                            <div class="team p-2">
+                                <a href="currency.html">
+                                    <div class="groupName">
+                                        <span>♦&nbsp;&nbsp;</span>噓你貨幣
+                                    </div>
+                                    <div class="nameRow">
+                                        <p class="groupText">#虛擬貨幣</p>
+                                        <p class="groupText">&nbsp;&nbsp;&nbsp;#動畫影片</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 align-self-center">
+                            <div class="team p-2">
+                                <a href="cloud.html">
+                                    <div class="groupName">
+                                        <span>♦&nbsp;&nbsp;</span>漫步雲端
+                                    </div>
+                                    <div class="nameRow">
+                                        <p class="groupText">#360環景</p>
+                                        <p class="groupText">&nbsp;&nbsp;&nbsp;#環景相機操作教學</p>
+                                    </div>
+                                    
+                                </a>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header  id="navbar">
+    <ul class="navIndex">
+        <div>
+            <li class="nav-item">
+                <a class="nav-link"  href="index.html"><div class="icon"></div></a>
+            </li>
+        </div>
+        <div>
+            <li class="nav-item project">
+                <a class="nav-link "  id="clickMenu">Project</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link "  href="https://www.youtube.com/channel/UCh9oWJ3csvrWGzCTzh7_BUw"  target="_blank"><div class="iconR yt"></div></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link "  href="https://www.facebook.com/NCYU.DEDM.GraduationExhibition?mibextid=LQQJ4d" target="_blank"><div class="iconR fb"></div></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="https://www.instagram.com/dedm_expo?igsh=Y3Bub2lzbDd2MDB0" target="_blank"><div class="iconR ig"></div></a>
+            </li>
+        </div>
+    </ul>
+</header>
+
+<div class="bgAll">
+    <section id="s1">
+        
+        <div class="top">
+            <div class="icon big"></div>
+            <div class="videoBG">
+                <!-- <img src="image/影片背景.PNG" class="img-fluid" alt="Responsive image"> -->
+                <div class="imagevideo"></div>
+                <div>
+                    <iframe  width="560" height="315" src="https://www.youtube.com/embed/B3FchQ9ta0U?si=20FSA_n8aL8uyVD2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                
+                
+            </div>
+            <a href="https://www.instagram.com/dedm_expo?igsh=Y3Bub2lzbDd2MDB0" target="_blank"><div class="iconR ig content"></div></a>
+            <a href="https://www.facebook.com/NCYU.DEDM.GraduationExhibition?mibextid=LQQJ4d" target="_blank"><div class="iconR fb content"></div></a>
+        </div>
+    </section>
+    
+    <section id="s2">
+        <div class="left">
+            <div class="textL">
+                <a href="#run1">PROJECT</a><br><br>
+                <a href="#run2">EXHIBITION</a><br><br>
+                <img src="image/down-arrow1.png" alt="">
+            </div>
+        </div>
+        <div class="right">
+            <div class="intro">
+                <img src="image/介紹文字.png" alt="">
+            </div>
+            
+            <div class="cards" id="run1">
+                <a href="TCG.html">
+                    <div>    
+                        <img src="image/主視覺/藝術家TCG.png" alt="">                           
+                    </div>
+                </a>               
+                <a href="SeaSEA.html">
+                    <div>
+                        <img src="image/主視覺/你來See SEA.png" alt="">
+                    </div>
+                </a>
+                <a href="Rootkit.html">
+                    <div>
+                        <img src="image/主視覺/Rootkit.png" alt="">
+                    </div>
+                </a>
+                <a href="truth.html">
+                    <div>
+                        <img src="image/主視覺/水落石出.jpg" alt="">
+                    </div>
+                </a>
+                <a href="beetle.html">
+                    <div>
+                        <img src="image/主視覺/甲蟲.png" alt="">
+                        
+                    </div>
+                </a>
+                <a href="HTH.html">
+                    <div>
+                        <img src="image/主視覺/HTH.png" alt="">
+                        
+                    </div>
+                </a>
+                <a href="ChemIsTry.html">
+                    <div>
+                        <img src="image/主視覺/ChemIsTry.png" alt="">
+                        
+                    </div>
+                </a>
+                <a href="island.html">
+                    <div>
+                        <img src="image/主視覺/最後的島嶼.png" alt="">
+                        
+                    </div>
+                </a>
+                <a href="ocean.html">
+                    <div>
+                        <img src="image/主視覺/海洋文明的嘆息.jpg" alt="">
+                        
+                    </div>
+                </a>
+                <a href="tiger.html">
+                    <div>
+                        <img src="image/主視覺/祈虎.PNG" alt="">
+                        
+                    </div>
+                </a>
+                <a href="currency.html">
+                    <div>
+                        <img src="image/主視覺/噓你貨幣.jpg" alt="">
+                        
+                    </div>
+                </a>
+                <a href="cloud.html">
+                    <div>
+                        <img src="image/主視覺/漫步雲端.png" alt="">
+                        
+                    </div>
+                </a>
+            </div>
+            
+            <div class="exhibit" id="run2">
+                <div class="inner">
+                    <div class="exhtext in">
+                        <div>
+                            <h1>校內展</h1>
+                        </div>
+                        <div class="detail">
+                            <div class="date">
+                                <img src="image/calendarW.png" alt="">
+                                <h2 class="dateText">2024/01/03</h2>
+                            </div>
+                            <div class="place">
+                                <img src="image/pinW.png" alt="">
+                                <a href="https://maps.app.goo.gl/aUCXbXiKTsxiELLd9" target="_blank"><h2 class="placeText">嘉義大學民雄校區教育館一樓</h2></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="image/校內展汽車路線.png" alt=""></div>
+                            <div class="swiper-slide"><img src="image/校內展公車路線.png" alt=""></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>© 2024 NCYU DEDM Graduation</p>
+    </footer>
+</div>
+<button type="button" id="BackTop" class="toTop-arrow"></button>
+
+</body>
+<script>
+    $(function(){
+        $('#BackTop').click(function(){ 
+            $('html,body').animate({scrollTop:0}, 333);
+        });
+        $(window).scroll(function() {
+            if ( $(this).scrollTop() > 300 ){
+                $('#BackTop').fadeIn(222);
+            } else {
+                $('#BackTop').stop().fadeOut(222);
+            }
+        }).scroll();
+    });
+</script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+</html>
