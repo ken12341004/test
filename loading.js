@@ -8,7 +8,7 @@ var batteryIntervalId;
 
 function changeImage() {
     currentImage = (currentImage + 1) % totalImages;
-    document.getElementById("loadingImage").src = 'hero/' + currentImage + '.png';
+    document.getElementById("currentImage").src = 'hero/' + currentImage + '.png';
 
     if (currentImage === totalImages - 1) {
         clearInterval(loadingIntervalId);
