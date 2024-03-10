@@ -1,4 +1,4 @@
-var currentImageIndex = 0;
+var currentImage = 0;
 var totalImages = 72;
 var currentBatteryImage = 0;
 var totalBatteryImages = 5;
