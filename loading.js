@@ -1,5 +1,5 @@
-var currentImage = 0;
-var totalImages = 72;
+var currentHeroImage = 0;
+var totalHeroImages = 72;
 var currentBatteryImage = 0;
 var totalBatteryImages = 5;
 
@@ -7,10 +7,10 @@ var loadingIntervalId;
 var batteryIntervalId;
 
 function changeImage() {
-    currentImage = (currentImage + 1) % totalImages;
-    document.getElementById("currentImage").src = 'hero/' + currentImage + '.png';
+    currentHeroImage = (currentHeroImage + 1) % totalHeroImages;
+    document.getElementById("currentImage").src = 'hero/' + currentHeroImage + '.png';
 
-    if (currentImage === totalImages - 1) {
+    if (currentHeroImage === totalHeroImages - 1) {
         clearInterval(loadingIntervalId);
     }
 }
