@@ -7,12 +7,12 @@ var loadingIntervalId;
 var batteryIntervalId;
 
 function changeImage() {
-    currentImage = (currentImage + 1) % totalImages;
-    document.getElementById("currentImage").src = 'hero/' + currentImage + '.png';
+     currentImage = (currentImage + 1) % totalImages;
+     document.getElementById("currentImage").src = 'hero/' + currentImage.toString().padStart(2, '0') + '.png';
 
-    if (currentImage === totalImages - 1) {
+     if (currentImage === totalImages - 1) {
         clearInterval(loadingIntervalId);
-    }
+     }
 }
 
 function changeBatteryImage() {
