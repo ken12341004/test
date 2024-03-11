@@ -23,5 +23,5 @@ function changeBatteryImage() {
         clearInterval(batteryIntervalId);
     }
 }
-loadingIntervalId = setInterval(changeImage, 5);
+loadingIntervalId = setInterval(changeImage, 25);
 batteryIntervalId = setInterval(changeBatteryImage, 675);
