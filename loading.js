@@ -1,5 +1,5 @@
-var currentHeroImage = 0;
-var totalHeroImages = 72;
+var currentImageIndex = 0;
+var totalImages = 72;
 var currentBatteryImage = 0;
 var totalBatteryImages = 5;
 
@@ -7,17 +7,18 @@ var loadingIntervalId;
 var batteryIntervalId;
 
 function changeImage() {
-    currentHeroImage = (currentHeroImage + 1) % totalHeroImages;
-    document.getElementById("currentImage").src = 'hero/' + currentHeroImage + '.png';
+    currentImageIndex = (currentImageIndex + 1) % totalImages;
+    var imageName = currentImageIndex.toString().padStart(4, '0');
+    document.getElementById("loadingImage").src = '吉祥物/_' + imageName + '.png';
 
-    if (currentHeroImage === totalHeroImages - 1) {
+    if (currentImageIndex === totalImages - 1) {
         clearInterval(loadingIntervalId);
     }
 }
 
 function changeBatteryImage() {
     currentBatteryImage = (currentBatteryImage + 1) % totalBatteryImages;
-    document.getElementById("batteryImage").src = 'batter/' + currentBatteryImage + '.png';
+    document.getElementById("batteryImage").src = '電池/' + currentBatteryImage + '.png';
 
     if (currentBatteryImage === totalBatteryImages - 1) {
         clearInterval(batteryIntervalId);
