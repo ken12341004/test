@@ -1,4 +1,4 @@
-var currentImage = 0;
+var currentImageIndex = 0;
 var totalImages = 72;
 var currentBatteryImage = 0;
 var totalBatteryImages = 5;
@@ -7,10 +7,11 @@ var loadingIntervalId;
 var batteryIntervalId;
 
 function changeImage() {
-    currentImage = (currentImage + 1) % totalImages;
-    document.getElementById("currentImage").src = '吉祥物/_00' + currentImage + '.png';
+    currentImageIndex = (currentImageIndex + 1) % totalImages;
+    var imageName = currentImageIndex.toString().padStart(4, '0');
+    document.getElementById("currentImage").src = '吉祥物/_' + imageName + '.png';
 
-    if (currentImage === totalImages - 1) {
+    if (currentImageIndex === totalImages - 1) {
         clearInterval(loadingIntervalId);
     }
 }
