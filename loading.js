@@ -9,7 +9,7 @@ var batteryIntervalId;
 function changeImage() {
     currentImageIndex = (currentImageIndex + 1) % totalImages;
     var imageName = currentImageIndex.toString().padStart(4, '0');
-    document.getElementById("loadingImage").src = '吉祥物/_' + imageName + '.png';
+    document.getElementById("currentImage").src = '吉祥物/_' + imageName + '.png';
 
     if (currentImageIndex === totalImages - 1) {
         clearInterval(loadingIntervalId);
