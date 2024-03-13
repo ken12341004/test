@@ -1,4 +1,3 @@
-const loadingVideo = document.getElementById('loading-video');
 
 setTimeout(function() {
   const loadingPage = document.getElementById('loading-page');
@@ -10,11 +9,3 @@ setTimeout(function() {
     loadingVideo.pause(); 
   }, 900);
 }, 3100);
-
-loadingVideo.addEventListener('loadedmetadata', function() {
-  loadingVideo.play();
-});
-
-loadingVideo.addEventListener('ended', function() {
-  loadingVideo.pause();
-});
